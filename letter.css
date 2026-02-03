@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', cursive;
+  background: radial-gradient(circle at center, #ffc0cb 0%, #ff99cc 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.background::before {
+  content: "❤ ❤ ❤ ❤ ❤";
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.08);
+  letter-spacing: 2em;
+  transform: rotate(-15deg);
+  z-index: -1;
+}
+
+.background::after {
+  content: "✨ ✨ ✨ ✨ ✨";
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 0.1);
+  letter-spacing: 1em;
+  transform: rotate(10deg);
+  z-index: -1;
+}
+
+.back-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff99cc, #ff3366);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+  font-size: 1em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 20px;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
+}
+.main-title {
+  text-align: center;
+  font-size: 3em;
+  color: #ff3366;
+  margin-top: 40px;
+  animation: fadeIn 1.5s ease;
+}
+
+.parchment {
+  width: 80%;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #f9f3e6 0%, #f5e6d3 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), inset 0 0 20px rgba(139, 69, 19, 0.05);
+  position: relative;
+  animation: popIn 1s ease;
+}
+
+.parchment-burnt {
+  padding: 20px;
+}
+
+.parchment h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  color: #8b4513;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.scroll-content {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #5c4033;
+  text-align: justify;
+}
+
+.scroll-content p {
+  margin-bottom: 15px;
+}
+
+.sticker {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 100px;
+  z-index: 2;
+}
+
+.sticker img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.bouton-{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
