@@ -6,6 +6,8 @@ body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body::before {
@@ -134,24 +136,6 @@ img {
   bottom: 60px; 
   right: -200px; 
   animation-delay: 3s;
-}
-
-@media (max-width: 1200px) {
-  .top-left { left: -150px; }
-  .top-right { right: -150px; }
-  .bottom-left { left: -150px; }
-  .bottom-right { right: -150px; }
-}
-
-@media (max-width: 768px) {
-  .note {
-    font-size: 0.65em;
-    padding: 6px 10px;
-  }
-  .top-left { left: -100px; top: 20px; }
-  .top-right { right: -100px; top: 20px; }
-  .bottom-left { left: -100px; }
-  .bottom-right { right: -100px; }
 }
 
 .click-button {

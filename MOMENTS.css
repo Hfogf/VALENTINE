@@ -6,6 +6,8 @@ body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body::before {
@@ -51,6 +53,8 @@ body::before {
   margin: 60px auto;
   flex-wrap: wrap;
   max-width: 1300px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .parch{
     display: flex;
