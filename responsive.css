@@ -80,11 +80,12 @@
   }
 
   .overlay {
-    padding: 80px 10px 30px !important;
+    padding: 120px 10px 30px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     min-height: 100vh !important;
+    position: relative !important;
   }
 
   .card {
@@ -94,6 +95,7 @@
     margin: 0 auto !important;
     max-height: 70vh !important;
     overflow-y: auto !important;
+    position: relative !important;
   }
 
   .card h1 {
@@ -392,14 +394,14 @@
     left: 50% !important;
     transform: translateX(-50%) !important;
   .sticker {
-    position: fixed !important;
-    top: 10px !important;
+    position: absolute !important;
+    top: -80px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     animation: none !important;
-    z-index: 100 !important;
+    z-index: 5 !important;
     display: flex !important;
-    gap: 10px !important;
+    gap: 12px !important;
     width: auto !important;
     flex-direction: row !important;
     justify-content: center !important;
@@ -407,7 +409,7 @@
   }
 
   .sticker img {
-    width: 60px !important;
+    width: 75px !important;
     height: auto !important;
     flex-shrink: 0 !important;
   }
