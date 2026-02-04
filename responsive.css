@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {}
   
   * {
     box-sizing: border-box;
@@ -30,13 +30,13 @@
   }
 
   button {
-    padding: 12px 20px !important;
-    font-size: 15px !important;
-    margin: 12px auto !important;
-    width: calc(100% - 30px) !important;
-    max-width: 280px !important;
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+    margin: 8px auto !important;
+    width: calc(100% - 20px) !important;
+    max-width: 200px !important;
     display: block !important;
-    min-height: 44px;
+    min-height: 40px;
   }
 
   #no {
@@ -80,7 +80,11 @@
   }
 
   .overlay {
-    padding: 140px 10px 20px !important;
+    padding: 80px 10px 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100vh !important;
   }
 
   .card {
@@ -88,6 +92,8 @@
     max-width: 100% !important;
     padding: 20px 15px !important;
     margin: 0 auto !important;
+    max-height: 70vh !important;
+    overflow-y: auto !important;
   }
 
   .card h1 {
@@ -101,18 +107,20 @@
 
   .options-row {
     flex-direction: column !important;
-    gap: 15px !important;
+    gap: 12px !important;
     width: 100% !important;
   }
 
   .card-option {
-    padding: 15px 10px !important;
-    font-size: 13px !important;
+    padding: 12px 8px !important;
+    font-size: 12px !important;
     width: 100% !important;
+    height: auto !important;
+    min-height: 130px !important;
   }
 
   .card-option img {
-    max-width: 45px !important;
+    max-width: 40px !important;
     height: auto !important;
   }
 
@@ -383,16 +391,23 @@
     top: 50px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
+  .sticker {
+    position: fixed !important;
+    top: 10px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     animation: none !important;
-    z-index: 2 !important;
+    z-index: 100 !important;
     display: flex !important;
-    gap: 12px !important;
+    gap: 10px !important;
     width: auto !important;
     flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
   .sticker img {
-    width: 75px !important;
+    width: 60px !important;
     height: auto !important;
     flex-shrink: 0 !important;
   }
