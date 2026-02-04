@@ -417,7 +417,7 @@
 
   body:not(:has(.overlay)) .sticker {
     position: fixed !important;
-    top: 20px !important;
+    top: 35% !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: auto !important;
@@ -427,12 +427,8 @@
   }
 
   body:not(:has(.overlay)) .sticker img {
-    width: 80px !important;
+    width: 110px !important;
     height: auto !important;
-  }
-
-  body:not(:has(.overlay)) .sticker img {
-    width: 60px !important;
   }
 }
 
