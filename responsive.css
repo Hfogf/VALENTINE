@@ -32,11 +32,26 @@
   button {
     padding: 12px 20px !important;
     font-size: 15px !important;
-    margin: 8px auto !important;
+    margin: 12px auto !important;
     width: calc(100% - 30px) !important;
     max-width: 280px !important;
     display: block !important;
     min-height: 44px;
+  }
+
+  #no {
+    position: absolute !important;
+    bottom: auto !important;
+    left: 50% !important;
+    transition: all 0.5s ease !important;
+  }
+
+  #no:hover {
+    left: 10% !important;
+  }
+
+  #no.fade-out {
+    transform: translateX(-500px) !important;
   }
 
   .intro-container {
@@ -363,7 +378,6 @@
     font-size: 0.75em !important;
   }
 
-  /* YES PAGE - Stickers arranged side by side */
   .sticker {
     position: absolute !important;
     top: 50px !important;
@@ -372,13 +386,13 @@
     animation: none !important;
     z-index: 2 !important;
     display: flex !important;
-    gap: 8px !important;
+    gap: 12px !important;
     width: auto !important;
     flex-direction: row !important;
   }
 
   .sticker img {
-    width: 55px !important;
+    width: 75px !important;
     height: auto !important;
     flex-shrink: 0 !important;
   }
@@ -386,14 +400,14 @@
   body:not(:has(.overlay)) .sticker {
     position: fixed !important;
     top: auto !important;
-    bottom: 10px !important;
-    left: 10px !important;
+    bottom: 15px !important;
+    left: 15px !important;
     transform: none !important;
-    width: 50px !important;
+    width: 60px !important;
   }
 
   body:not(:has(.overlay)) .sticker img {
-    width: 50px !important;
+    width: 60px !important;
   }
 }
 

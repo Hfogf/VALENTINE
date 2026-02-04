@@ -73,24 +73,55 @@ button {
   background: linear-gradient(135deg, #ff6699, #ff3366);
   color: white;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, left 0.3s ease, top 0.3s ease;
-  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, left 0.3s ease, top 0.3s ease, background 0.3s ease;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.2);
   font-weight: bold;
   font-family: 'Segoe UI', sans-serif;
   margin: 10px;
   position: relative;
 }
 
+button:hover {
+  box-shadow: 0 0 35px rgba(255, 105, 180, 0.7), inset 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+#yes {
+  background: linear-gradient(135deg, #ff6699, #ff3366);
+}
+
+#yes:hover {
+  background: linear-gradient(135deg, #ff7aad, #ff5580);
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.8), inset 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+#no {
+  background: linear-gradient(135deg, #ff8fa3, #ff6699);
+  transition: opacity 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#no:hover {
+  box-shadow: 0 0 30px rgba(255, 140, 160, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
 #yes.grow {
   transform: scale(2);
-  background: linear-gradient(135deg, #ff3366, #ff6699);
-  box-shadow: 0 0 40px rgba(255, 51, 102, 0.7);
+  background: linear-gradient(135deg, #ff3366, #ff1a4d);
+  box-shadow: 0 0 50px rgba(255, 51, 102, 0.9), inset 0 0 30px rgba(255, 255, 255, 0.4);
+  animation: joyPulse 0.5s ease;
 }
 
 #no.fade-out {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.6s ease;
+  transform: translateX(-100px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+@keyframes joyPulse {
+  0% { transform: scale(2) rotate(-5deg); }
+  50% { transform: scale(2.1) rotate(5deg); }
+  100% { transform: scale(2) rotate(0deg); }
 }
 
 #message {
@@ -123,14 +154,20 @@ button {
 }
 
 .sticker img {
-  width: 120px;
+  width: 150px;
   height: auto;
-  filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.4));
+  filter: drop-shadow(0 0 15px rgba(255, 105, 180, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.sticker img:hover {
+  transform: scale(1.05);
 }
 
 @keyframes dropBounce {
   0% { top: -150px; opacity: 0; }
   60% { top: 100px; opacity: 1; }
-  80% { top: 130px; }
-  100% { top: 120px; }
+  80% { top: 140px; }
+  100% { top: 130px; }
 }
+
