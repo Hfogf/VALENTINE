@@ -81,7 +81,7 @@
   }
 
   .overlay {
-    padding: 120px 10px 30px !important;
+    padding: 100px 10px 30px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -391,18 +391,13 @@
 
   .sticker {
     position: absolute !important;
-    top: 50px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-  .sticker {
-    position: absolute !important;
     top: -80px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     animation: none !important;
     z-index: 5 !important;
     display: flex !important;
-    gap: 12px !important;
+    gap: 15px !important;
     width: auto !important;
     flex-direction: row !important;
     justify-content: center !important;
@@ -410,7 +405,7 @@
   }
 
   .sticker img {
-    width: 75px !important;
+    width: 90px !important;
     height: auto !important;
     flex-shrink: 0 !important;
   }
@@ -430,7 +425,7 @@
     width: 110px !important;
     height: auto !important;
   }
-}
+
 
 @media screen and (max-height: 600px) and (orientation: landscape) {
   .container {
