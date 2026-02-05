@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
   
   * {
     box-sizing: border-box;
@@ -49,12 +49,12 @@
   }
 
   #no:hover {
-    transform: translateY(80px) !important;
-    opacity: 0.7 !important;
+    transform: translateX(300px) !important;
+    opacity: 0.5 !important;
   }
 
   #no.fade-out {
-    transform: translateY(150px) !important;
+    transform: translateX(400px) !important;
     opacity: 0 !important;
     pointer-events: none !important;
   }
@@ -394,12 +394,12 @@
   }
 
   .sticker {
-    position: absolute !important;
-    top: -80px !important;
+    position: fixed !important;
+    top: 80px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     animation: none !important;
-    z-index: 5 !important;
+    z-index: 20 !important;
     display: flex !important;
     gap: 15px !important;
     width: auto !important;
@@ -409,27 +409,38 @@
   }
 
   .sticker img {
-    width: 90px !important;
+    width: 100px !important;
     height: auto !important;
     flex-shrink: 0 !important;
   }
 
   body:not(:has(.overlay)) .sticker {
-    position: absolute !important;
-    top: -60px !important;
+    position: fixed !important;
+    top: 15px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: auto !important;
-    z-index: 10 !important;
+    z-index: 100 !important;
     display: flex !important;
     gap: 0 !important;
   }
 
   body:not(:has(.overlay)) .sticker img {
-    width: 110px !important;
+    width: 130px !important;
     height: auto !important;
   }
 
+  /* MOMENTS.html and letter.html sticker positioning */
+  .main-title + div .sticker,
+  body:has(.main-title) .sticker {
+    top: 8px !important;
+    z-index: 30 !important;
+  }
+
+  body:has(.main-title) .sticker img {
+    width: 120px !important;
+  }
+}
 
 @media screen and (max-height: 600px) and (orientation: landscape) {
   .container {
