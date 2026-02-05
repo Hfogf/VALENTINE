@@ -416,7 +416,7 @@
 
   body:not(:has(.overlay)) .sticker {
     position: fixed !important;
-    top: 50px !important;
+    top: 120px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: auto !important;
