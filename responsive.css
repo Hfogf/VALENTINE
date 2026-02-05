@@ -395,7 +395,7 @@
 
   .sticker {
     position: fixed !important;
-    top: 80px !important;
+    top: 10px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     animation: none !important;
@@ -409,14 +409,14 @@
   }
 
   .sticker img {
-    width: 100px !important;
+    width: 90px !important;
     height: auto !important;
     flex-shrink: 0 !important;
   }
 
   body:not(:has(.overlay)) .sticker {
     position: fixed !important;
-    top: 15px !important;
+    top: -120px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: auto !important;
@@ -430,7 +430,6 @@
     height: auto !important;
   }
 
-  /* MOMENTS.html and letter.html sticker positioning */
   .main-title + div .sticker,
   body:has(.main-title) .sticker {
     top: 8px !important;
