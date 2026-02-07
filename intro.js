@@ -2,7 +2,7 @@ document.getElementById("startBtn").addEventListener("click", () => {
   const name = document.getElementById("nameInput").value.trim().toLowerCase();
   const errorMessage = document.getElementById("errorMessage");
 
-  if (name === "rosita") {
+  if (name === "zickie") {
     window.location.href = "valentine.html";
   } else {
     errorMessage.textContent = "Oh non 😢... Ce prénom ne fait pas battre mon cœur. Réessaie encore...";
