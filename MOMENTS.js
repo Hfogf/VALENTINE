@@ -12,8 +12,6 @@ function typeWriter() {
 
 window.onload = typeWriter;
 
-
-// Générer des cœurs flottants
 function createHearts() {
   for (let i = 0; i < 25; i++) {
     const heart = document.createElement('div');
@@ -28,11 +26,9 @@ function createHearts() {
   }
 }
 
-// Initialiser les animations
 createSparkles();
 createHearts();
 
-// Recréer les particules périodiquement pour un effet continu
 setInterval(() => {
   createSparkles();
 }, 10000);

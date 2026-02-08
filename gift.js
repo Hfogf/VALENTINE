@@ -1,4 +1,3 @@
-// Générer des étoiles scintillantes
 function createSparkles() {
   for (let i = 0; i < 60; i++) {
     const sparkle = document.createElement('div');
@@ -11,7 +10,6 @@ function createSparkles() {
   }
 }
 
-// Générer des cœurs flottants
 function createHearts() {
   for (let i = 0; i < 25; i++) {
     const heart = document.createElement('div');
@@ -26,16 +24,13 @@ function createHearts() {
   }
 }
 
-// Initialiser les animations
 createSparkles();
 createHearts();
 
-// Recréer les particules périodiquement pour un effet continu
 setInterval(() => {
   createSparkles();
 }, 10000);
 
-// Navigation
 document.querySelector('.nav-button.left').addEventListener('click', () => {
   window.history.back();
 });
@@ -44,11 +39,11 @@ document.querySelector('.nav-button.right').addEventListener('click', () => {
   goToNextScene();
 });
 
-// Transition vers la prochaine scène
+
 function goToNextScene() {
   document.body.style.transition = 'opacity 1s ease';
   document.body.style.opacity = '0';
   setTimeout(() => {
-    window.location.href = 'end.html'; // Changez vers votre prochaine page
+    window.location.href = 'end.html'; 
   }, 1000);
 }

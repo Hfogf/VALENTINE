@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+  font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+  background: linear-gradient(135deg, #1a0a15 0%, #2d1428 25%, #3d0a1f 50%, #1a0a15 75%, #0a0a0f 100%);
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
@@ -18,24 +18,36 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(circle, rgba(255, 182, 193, 0.3) 2px, transparent 2px),
-    radial-gradient(circle, rgba(255, 105, 180, 0.2) 1px, transparent 1px);
+    radial-gradient(circle, rgba(255, 20, 147, 0.08) 3px, transparent 3px),
+    radial-gradient(circle, rgba(255, 105, 180, 0.06) 1.5px, transparent 1.5px);
   background-size: 50px 50px, 30px 30px;
   background-position: 0 0, 25px 25px;
   z-index: 0;
   pointer-events: none;
+  animation: floatBg 20s ease-in-out infinite;
+}
+
+@keyframes floatBg {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.8; }
 }
 
 body::after {
-  content: "❤ ❤ ❤ ❤ ❤";
+  content: "✨ ✨ ✨ ✨ ✨";
   position: fixed;
   bottom: 8%;
   right: 5%;
   font-size: 2em;
-  color: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 20, 147, 0.08);
   letter-spacing: 2em;
   transform: rotate(15deg);
   z-index: -1;
+  animation: sparkleFloat 6s ease-in-out infinite;
+}
+
+@keyframes sparkleFloat {
+  0%, 100% { opacity: 0.08; transform: rotate(15deg) translateY(0); }
+  50% { opacity: 0.15; transform: rotate(15deg) translateY(-10px); }
 }
 
 .starfield {
@@ -78,19 +90,19 @@ body::after {
 .sticker img {
   width: 120px;
   height: auto;
-  filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.7)) drop-shadow(0 0 40px rgba(255, 182, 193, 0.4));
-  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 35px rgba(255, 20, 147, 0.8)) drop-shadow(0 0 60px rgba(255, 20, 147, 0.5)) drop-shadow(0 0 80px rgba(255, 105, 180, 0.3));
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   animation: stickerGlow 2s infinite ease-in-out;
 }
 
 .sticker img:hover {
-  transform: scale(1.1) rotate(-5deg);
-  filter: drop-shadow(0 0 30px rgba(255, 105, 180, 0.9)) drop-shadow(0 0 50px rgba(255, 182, 193, 0.6));
+  transform: scale(1.15) rotate(-8deg);
+  filter: drop-shadow(0 0 45px rgba(255, 20, 147, 1)) drop-shadow(0 0 75px rgba(255, 20, 147, 0.6)) drop-shadow(0 0 100px rgba(255, 105, 180, 0.4));
 }
 
 @keyframes stickerGlow {
-  0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.7)) drop-shadow(0 0 40px rgba(255, 182, 193, 0.4)); }
-  50% { filter: drop-shadow(0 0 25px rgba(255, 105, 180, 0.9)) drop-shadow(0 0 50px rgba(255, 182, 193, 0.5)); }
+  0%, 100% { filter: drop-shadow(0 0 35px rgba(255, 20, 147, 0.8)) drop-shadow(0 0 60px rgba(255, 20, 147, 0.5)) drop-shadow(0 0 80px rgba(255, 105, 180, 0.3)); }
+  50% { filter: drop-shadow(0 0 45px rgba(255, 20, 147, 1)) drop-shadow(0 0 75px rgba(255, 20, 147, 0.6)) drop-shadow(0 0 100px rgba(255, 105, 180, 0.4)); }
 }
 
 @keyframes dropBounce {
@@ -110,23 +122,23 @@ body::after {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
+  background: rgba(20, 5, 15, 0.85);
+  backdrop-filter: blur(10px);
   border-radius: 25px;
   padding: 40px;
   text-align: center;
-  color: white;
+  color: #FF69B4;
   animation: fadeIn 1.2s ease;
   max-width: 90%;
   width: 600px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 50px rgba(255, 20, 147, 0.3), inset 0 1px 2px rgba(255, 105, 180, 0.15);
+  border: 1px solid rgba(255, 20, 147, 0.3);
 }
 
 .card h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
-  background: linear-gradient(90deg, #ff99cc, #ff3366);
+  background: linear-gradient(90deg, #FF1493, #FF69B4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -145,20 +157,20 @@ body::after {
 }
 
 .card-option {
-  background: linear-gradient(135deg, #ffe6ec 0%, #ffccdd 100%);
+  background: rgba(45, 20, 40, 0.85);
   border-radius: 25px;
   padding: 20px;
   width: 140px;
   height: 180px;
   text-align: center;
   text-decoration: none;
-  color: #ff3366;
-  box-shadow: 0 12px 30px rgba(255, 105, 180, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #FF69B4;
+  box-shadow: 0 12px 35px rgba(255, 20, 147, 0.35), inset 0 1px 2px rgba(255, 105, 180, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   position: relative;
   overflow: hidden;
   animation: popIn 0.8s ease forwards;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 20, 147, 0.3);
 }
 
 .card-option::before {
@@ -168,15 +180,15 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(255, 105, 180, 0.15) 0%, transparent 60%);
   border-radius: 25px;
   pointer-events: none;
 }
 
 .card-option:hover {
   transform: scale(1.12) translateY(-5px);
-  box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  filter: brightness(1.05);
+  box-shadow: 0 15px 45px rgba(255, 20, 147, 0.45), inset 0 1px 2px rgba(255, 105, 180, 0.2);
+  filter: brightness(1.1);
 }
 
 @keyframes fadeIn {
@@ -206,11 +218,11 @@ body::after {
   font-size: 1em;
   font-weight: bold;
   display: block;
-  color: #ff3366;
+  color: #FF69B4;
 }
 
 .card-option p {
   font-size: 0.85em;
-  color: #ff6699;
+  color: #FF85A2;
   margin-top: 8px;
 }

@@ -17,7 +17,7 @@ on sait tout les deux que le talent principal de l'amour est de faire durer le m
 Alors, continuons à écrire notre histoire, une page à la fois, avec la promesse silencieuse que chaque jour à venir sera une nouvelle aventure à deux. 
 Je t'aime plus que les mots ne sauraient le dire , et encore plus que ce coeur ne peux contenir , car tu me fais me sentir moimême d'une manière que personne d'autre ne peut. 
 Avec tout mon amour,
-je t'aime`; ;
+je t'aime.`;
 
   const target = document.getElementById("parchmentText");
   let i = 0;
